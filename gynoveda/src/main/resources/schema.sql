@@ -1,0 +1,9 @@
+CREATE TABLE leads (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(15) NOT NULL,
+    status ENUM('Pending', 'Appointment Booked', 'Not Booked') DEFAULT 'Pending',
+    reason VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
